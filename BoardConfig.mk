@@ -71,3 +71,8 @@ TARGET_LIBINIT_DEFINES_FILE := device/samsung/on5ltetmo/init/init_on5ltetmo.cpp
 # Debug flags
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
+
+# PBRP Flags
+# Exclude Nano & Bash
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_BASH := true
