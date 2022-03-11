@@ -28,7 +28,7 @@ TARGET_2ND_CPU_VARIANT := generic
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE :=  0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/samsung/a3xelte/dtb
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/samsung/a3xelte/prebuilt/dtb
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x360000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x360000000
@@ -36,7 +36,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x30000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x130000000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/samsung/a3xelte/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/a3xelte/prebuilt/kernel
 
 
 # Use this flag if the board has a ext4 partition larger than 2gb
