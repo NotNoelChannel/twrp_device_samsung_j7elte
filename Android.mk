@@ -16,7 +16,7 @@
 
 ifneq ($(filter a3xelte,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/samsung/j1pop3g
+LOCAL_PATH := device/samsung/a3xelte
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
