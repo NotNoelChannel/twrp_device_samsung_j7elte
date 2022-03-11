@@ -30,8 +30,6 @@ TARGET_2ND_CPU_ABI2          := armeabi
 TARGET_2ND_CPU_VARIANT       := generic
 TARGET_BOARD_PLATFORM        := exynos7580
 TARGET_BOOTLOADER_BOARD_NAME := universal7580
-TARGET_GLOBAL_CFLAGS         += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS       += -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
 TARGET_PREBUILT_KERNEL   := $(LOCAL_PATH)/prebuilt/zImage
@@ -67,4 +65,3 @@ TW_BRIGHTNESS_PATH               := "/sys/devices/14800000.dsim/backlight/panel/
 # TWRP Recovery
 TW_EXCLUDE_SUPERSU := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
