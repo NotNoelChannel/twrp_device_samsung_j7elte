@@ -1,2 +1,3 @@
-# TWRP_Samsung_a3xelte
-TWRP device tree for Samsung sm-a310
+# TWRP device tree for Samsung Galaxy A3 (2016)
+
+## `WORK IN PROGRESS. WILL EAT YOUR CAT.`
