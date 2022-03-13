@@ -21,7 +21,7 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 $(call inherit-product, build/target/product/languages_small.mk)
 
 PRODUCT_DEVICE       := a3xelte
-PRODUCT_NAME         := twrp_a3xelte
+PRODUCT_NAME         := omni_a3xelte
 PRODUCT_BRAND        := samsung
 PRODUCT_MODEL        := SM-A310F
 PRODUCT_MANUFACTURER := samsung
