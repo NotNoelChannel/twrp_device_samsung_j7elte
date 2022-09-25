@@ -66,3 +66,10 @@ TW_BRIGHTNESS_PATH               := "/sys/devices/14800000.dsim/backlight/panel/
 # TWRP Recovery
 TW_EXCLUDE_SUPERSU := true
 BOARD_SUPPRESS_SECURE_ERASE := true
+
+# SHRP Recovery
+SHRP_LITE := true
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+
