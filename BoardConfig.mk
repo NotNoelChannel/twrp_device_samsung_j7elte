@@ -55,8 +55,8 @@ RECOVERY_SDCARD_ON_DATA            := true
 TARGET_NO_BOOTLOADER    := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE    := true
-TW_EXCLUDE_NANO 		    := true
-TW_EXCLUDE_BASH 		    := true
+TW_EXCLUDE_NANO 		  := true
+TW_EXCLUDE_BASH 		  := true
 # Display & Graphics
 TW_THEME                         := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
