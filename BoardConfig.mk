@@ -55,8 +55,8 @@ RECOVERY_SDCARD_ON_DATA            := true
 TARGET_NO_BOOTLOADER    := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE    := true
-TW_EXCLUDE_NANO 		:= true
-TW_EXCLUDE_BASH 		:= true
+TW_EXCLUDE_NANO 		    := true
+TW_EXCLUDE_BASH 		    := true
 # Display & Graphics
 TW_THEME                         := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -64,12 +64,16 @@ TARGET_RECOVERY_PIXEL_FORMAT     := "RGBA_8888"
 TW_BRIGHTNESS_PATH               := "/sys/devices/14800000.dsim/backlight/panel/brightness"
 
 # TWRP Recovery
-TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_SUPERSU          := false
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # SHRP Recovery
-SHRP_LITE := true
-SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /external_sd
-SHRP_OTG := /usb_otg
+SHRP_MAINTAINER := notnoelchannel
+SHRP_EXPRESS    := true
+SHRP_LITE       := true
+SHRP_INTERNAL   := /sdcard
+SHRP_REC        := /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
+SHRP_EXTERNAL   := /external_sd
+SHRP_OTG        := /usb_otg
+SHRP_DEVICE_CODE := a3xelte
 
