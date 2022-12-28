@@ -56,6 +56,10 @@ jobs:
       with:
         name: ofrp
         path: /home/runner/TWRP/out/target/product/a3xelte/recovery.*
+        
+    - name: Uploading OFRP ZIP builds
+      uses: actions/upload-artifact@v2
       with:
         name: ofrpzip
         path: /home/runner/TWRP/out/target/product/a3xelte/*.zip
+
