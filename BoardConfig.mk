@@ -1,47 +1,48 @@
 USE_CAMERA_STUB := true
+LOCAL_PATH := device/samsung/a3xelte
+
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := universal3475
+TARGET_BOOTLOADER_BOARD_NAME := universal7580
 
 # Platform
-TARGET_BOARD_PLATFORM := exynos3
+TARGET_BOARD_PLATFORM        := exynos7580
 TARGET_BOARD_PLATFORM_GPU := mali-t720
 
-# Flags
-#TARGET_GLOBAL_CFLAGS +=
-#TARGET_GLOBAL_CPPFLAGS +=
-#COMMON_GLOBAL_CFLAGS +=
-
 # Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := generic
-TARGET_CPU_SMP := true
+TARGET_ARCH                  := arm64
+TARGET_ARCH_VARIANT          := armv8-a
+TARGET_CPU_ABI               := arm64-v8a
+TARGET_CPU_ABI2              :=
+TARGET_CPU_VARIANT           := generic
+TARGET_CPU_SMP               := true
+TARGET_2ND_ARCH              := arm
+TARGET_2ND_ARCH_VARIANT      := armv7-a-neon
+TARGET_2ND_CPU_ABI           := armeabi-v7a
+TARGET_2ND_CPU_ABI2          := armeabi
+TARGET_2ND_CPU_VARIANT       := generic
 
-BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
+BOARD_KERNEL_CMDLINE :=	buildvariant=eng
 BOARD_KERNEL_BASE := 0x10000000
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
+TARGET_PREBUILT_DTB    := $(LOCAL_PATH)/prebuilt/dtb
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPPB24A000RU
+BOARD_MKBOOTIMG_ARGS     := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/prebuilt/dtb
 
-BOARD_BOOTIMAGE_PARTITION_SIZE     := 0x000D00000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x000F00000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x0BB800000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x2A4FFC000 # 0x2A5000000 16384 (footer)
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x040000000
+BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 39845888
+BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3145728000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12096372736
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-TARGET_PREBUILT_KERNEL := device/samsung/on5ltetmo/zImage
-TARGET_PREBUILT_DTB := device/samsung/on5ltetmo/dtb.img
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/on5ltetmo/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/a3xelte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -59,18 +60,6 @@ TW_EXCLUDE_SUPERSU := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_CRYPTO_SAMSUNG := true
-#TARGET_HW_DISK_ENCRYPTION := true
-
-# Init properties from bootloader version, ex. model info
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_on5ltetmo
-TARGET_RECOVERY_DEVICE_MODULES := libinit_on5ltetmo
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/on5ltetmo/init/init_on5ltetmo.cpp
-
-# Debug flags
-#TWRP_INCLUDE_LOGCAT := true
-#TARGET_USES_LOGD := true
 
 # PBRP Flags
 # Exclude Nano & Bash
