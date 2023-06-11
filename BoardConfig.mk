@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a3xelte
+LOCAL_PATH := device/samsung/j7elte
 
 # Platform
 TARGET_ARCH                  := arm64
@@ -75,5 +75,5 @@ SHRP_INTERNAL   := /sdcard
 SHRP_REC        := /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY
 SHRP_EXTERNAL   := /external_sd
 SHRP_OTG        := /usb_otg
-SHRP_DEVICE_CODE := a3xelte
+SHRP_DEVICE_CODE := j7elte
 

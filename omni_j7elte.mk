@@ -20,10 +20,10 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 $(call inherit-product, build/target/product/languages_small.mk)
 
-PRODUCT_DEVICE       := a3xelte
-PRODUCT_NAME         := omni_a3xelte
+PRODUCT_DEVICE       := j7elte
+PRODUCT_NAME         := omni_j7elte
 PRODUCT_BRAND        := samsung
-PRODUCT_MODEL        := SM-A310F
+PRODUCT_MODEL        := SM-J700
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_RELEASE_NAME := Samsung Galaxy A3 (2016)
+PRODUCT_RELEASE_NAME := Samsung Galaxy J7 (2015)
 TARGET_VENDOR        := samsung

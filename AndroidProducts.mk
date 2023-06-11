@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/a3xelte
+LOCAL_PATH := device/samsung/j7elte
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_a3xelte.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_j7elte.mk

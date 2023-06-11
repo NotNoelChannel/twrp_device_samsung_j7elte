@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter a3xelte,$(TARGET_DEVICE)),)
+ifneq ($(filter j7elte,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/samsung/a3xelte
+LOCAL_PATH := device/samsung/j7elte
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

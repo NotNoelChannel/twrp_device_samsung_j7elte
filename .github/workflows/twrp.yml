@@ -1,4 +1,4 @@
-name: TWRP CI
+name: TWRP CI (SM-J700)
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
         python3 ~/.bin/repo init --depth=1 -u https://github.com/unlegacy-devices/fox-7.1_manifest.git -b twrp-7.1
-        git clone --branch android-7.1 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_a3xelte.git ~/TWRP/device/samsung/a3xelte
+        git clone --branch android-7.1 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_j7elte.git ~/TWRP/device/samsung/j7elte
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building TWRP
       run: |
@@ -47,7 +47,7 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL="C"
         export OF_LEGACY_SHAR512=1
-        lunch omni_a3xelte-eng
+        lunch omni_j7elte-eng
         mka recoveryimage
         export PATH=$OLDPATH
         export JAVA_HOME=$OLDJAVAHOME
@@ -55,4 +55,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: twrp
-        path: /home/runner/TWRP/out/target/product/a3xelte/recovery.*
+        path: /home/runner/TWRP/out/target/product/j7elte/recovery.*

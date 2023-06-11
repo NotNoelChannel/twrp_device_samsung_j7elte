@@ -1,4 +1,4 @@
-name: PBRP CI
+name: PBRP CI (SM-J700)
 
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
         python3 ~/.bin/repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-6.0
-        git clone --branch android-6.0 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_a3xelte.git ~/PBRP/device/samsung/a3xelte
+        git clone --branch android-6.0 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_j7elte.git ~/PBRP/device/samsung/j7elte
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building PBRP
       run: |
@@ -41,7 +41,7 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         export LC_ALL="C"
-        lunch omni_a3xelte-eng
+        lunch omni_j7elte-eng
         mka recoveryimage
         export PATH=$OLDPATH
         export JAVA_HOME=$OLDJAVAHOME
@@ -49,4 +49,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: pbrp
-        path: /home/runner/PBRP/out/target/product/a3xelte/recovery.*
+        path: /home/runner/PBRP/out/target/product/j7elte/recovery.*
