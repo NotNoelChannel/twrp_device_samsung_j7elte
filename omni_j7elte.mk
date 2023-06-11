@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := a3xelte
+PRODUCT_RELEASE_NAME := j7elte
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -7,7 +7,7 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := a3xelte
-PRODUCT_NAME := omni_a3xelte
+PRODUCT_DEVICE := j7elte
+PRODUCT_NAME := omni_j7elte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

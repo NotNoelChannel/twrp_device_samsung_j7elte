@@ -1,2 +1,2 @@
-add_lunch_combo omni_a3xelte-eng
-add_lunch_combo omni_a3xelte-userdebug
+add_lunch_combo omni_j7elte-eng
+add_lunch_combo omni_j7elte-userdebug

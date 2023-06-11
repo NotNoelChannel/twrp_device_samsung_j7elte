@@ -1,5 +1,5 @@
 USE_CAMERA_STUB := true
-LOCAL_PATH := device/samsung/a3xelte
+LOCAL_PATH := device/samsung/j7elte
 
 
 TARGET_NO_BOOTLOADER := true
@@ -42,7 +42,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/a3xelte/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7elte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
